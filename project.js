@@ -1,4 +1,4 @@
-const image = document.querySelector("#image");
+    const image = document.querySelector("#image");
     const userName = document.querySelector("#userName");
     const userId = document.querySelector("#id");
     const githubLink = document.querySelector("#githubLink");
