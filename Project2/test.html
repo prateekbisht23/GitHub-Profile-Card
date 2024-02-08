@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        /* background: rgb(233, 150, 213);
+        background: linear-gradient(
+          150deg,
+          rgba(233, 150, 213, 1) 0%,
+          rgba(26, 80, 98, 1) 100%
+        ); */
+        background: url(testimg.jpeg);
+        height: 818px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .cont-head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 34, 80);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.38);
+        padding: 0;
+        height: 1.9em;
+        width: 1.9em;
+        border: none;
+        border-radius: 100px;
+        color: #fff;
+        font-size: 85px;
+        translate: 0 70px;
+      }
+      .container {
+        background-color: rgb(255, 255, 255, 0.36);
+        padding: 90px 20px 50px 20px;
+        border-radius: 28px;
+        box-shadow: 0 0 20px rgb(255, 255, 255, 0.16);
+        width: 32em;
+        max-height: 26em;
+      }
+      .cont-1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.73em;
+      }
+      .name-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 34, 80);
+        height: 2.7em;
+        width: 2.7em;
+      }
+      .sub-name-input {
+        display: flex;
+        height: 3.26em;
+        width: 18em;
+        padding-left: 9px;
+        border: none;
+        background-color: rgba(0, 34, 80, 0.6);
+      }
+      .id-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 34, 80);
+        height: 2.7em;
+        width: 2.7em;
+      }
+      .sub-id-input {
+        display: flex;
+        height: 3.26em;
+        width: 18em;
+        padding-left: 9px;
+        border: none;
+        background-color: rgba(0, 34, 80, 0.6);
+      }
+      .pass-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 34, 80);
+        height: 2.7em;
+        width: 2.7em;
+      }
+      .sub-pass-input {
+        display: flex;
+        height: 3.26em;
+        width: 18em;
+        padding-left: 9px;
+        border: none;
+        background-color: rgba(0, 34, 80, 0.6);
+      }
+      #sub-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 17.5em;
+        margin-left: 5.9em;
+        margin-top: 2.6em;
+        color: rgb(0, 34, 80, 0.82);
+      }
+      .remember {
+        display: flex;
+        align-items: center;
+      }
+      .remember label {
+        margin-left: 0.48em;
+      }
+      input[type="checkbox"] {
+        accent-color: rgba(21, 58, 110, 0.568);
+      }
+      #login {
+        background-color: rgba(21, 58, 110, 0.48);
+        color: #fff;
+        padding: 0.4em 1.3em 0.4em 1.3em;
+        border: none;
+        border-radius: 16px;
+        box-shadow: 5px 6px 20px rgba(21, 58, 110, 0.41);
+        font-size: 1.2em;
+        letter-spacing: 0.03em;
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+      }
+      #login:hover {
+        background-color: rgba(21, 58, 110, 0.58);
+        scale: 0.989;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-style: italic;
+      }
+      ::placeholder {
+        color: white;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="cont-head">
+        <i class="fa-regular fa-user" style="color: #ffffff"></i>
+      </div>
+      <div class="container">
+        <div class="cont-1" id="name">
+          <div class="name-logo">
+            <i class="fa-solid fa-user" style="color: #ffffff"></i>
+          </div>
+          <div class="name-input">
+            <input
+              type="text"
+              placeholder="School Name"
+              class="sub-name-input"
+              required
+            />
+          </div>
+        </div>
+        <div class="cont-1" id="id">
+          <div class="id-logo">
+            <i class="fa-solid fa-id-card" style="color: #ffffff"></i>
+          </div>
+          <div class="id-input">
+            <input
+              type="text"
+              placeholder="School ID"
+              class="sub-id-input"
+              required
+            />
+          </div>
+        </div>
+        <div class="cont-1" id="password">
+          <div class="pass-logo">
+            <i class="fa-solid fa-lock" style="color: #ffffff"></i>
+          </div>
+          <div class="pass-input">
+            <input
+              type="password"
+              placeholder="Password"
+              class="sub-pass-input"
+              required
+            />
+          </div>
+        </div>
+        <div class="cont-1" id="sub-cont">
+          <div class="remember">
+            <input type="checkbox" />
+            <label for="remember">Remember me</label>
+          </div>
+          <div class="forgot">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+        <div class="cont-1">
+          <div class="login">
+            <input type="submit" name="login" id="login" value="LOGIN" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
