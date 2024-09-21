@@ -3,6 +3,24 @@
     const userId = document.querySelector("#id");
     const githubLink = document.querySelector("#githubLink");
 
+    const para = new URLSearchParams(window.location.search);
+    const inputValue = para.get('input');
+
+    fetch(`https://api.github.com/users/${inputValue}`)
+    .then( (response) => {
+        return response.json()
+    } )
+    .then( (data) => {
+        image.setAttribute("src", data.avatar_url);
+        userName.innerHTML = data.login;
+        userId.innerHTML += data.id;
+        githubLink.setAttribute("href", data.html_url);
+    } )
+    .catch( (error) => {
+        console.log(`ERROR: ${error}`);
+    } )
+      
+
     // visitGithub = function () {};
 
     /* const requestUrl = "https://api.github.com/users/prateekbisht23";
@@ -37,20 +55,5 @@
         // console.log(data.login);
 
     } */
-
-    fetch('https://api.github.com/users/prateekbisht23')
-    .then( (response) => {
-        return response.json()
-    } )
-    .then( (data) => {
-        image.setAttribute("src", data.avatar_url);
-        userName.innerHTML = data.login;
-        userId.innerHTML += data.id;
-        githubLink.setAttribute("href", data.html_url);
-    } )
-    .catch( (error) => {
-        console.log(`ERROR: ${error}`);
-    } )
-
 
     // takeInformation();

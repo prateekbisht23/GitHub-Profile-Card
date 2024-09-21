@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API XML Requests</title>
-    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="designs">
@@ -19,16 +22,15 @@
       <div class="shadow2"></div>
     </div>
     <div class="container">
-      <div class="profile">
-        <img id="image" />
-      </div>
-      <div class="card">
-        <a id="githubLink" href="" target="_blank">
-          <p id="userName"></p>
-        </a>
-        <p id="id">GITHUB ID -&nbsp;</p>
+      <h1 class="heading">CREATE YOUR GITHUB PROFILE CARD</h1>
+      <div class="cardI">
+        <form action="getUserId">
+          <label for="UserId"> GitHub UserName </label>
+          <input type="text" class="input1" id="textInput" />
+          <input type="button" value="CREATE" class="input2" id="buttonInput" />
+        </form>
       </div>
     </div>
   </body>
-  <script src="project.js"></script>
+  <script src="index.js"></script>
 </html>
